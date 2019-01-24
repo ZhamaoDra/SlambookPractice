@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -std=c++11 -O3 -O3 -DNDEBUG  -shared -Wl,-soname,libCOST_FUNCTION.so -o libCOST_FUNCTION.so  /usr/local/lib/libceres.a -lglog -lgflags -lpthread -lspqr -ltbbmalloc -ltbb -lcholmod -lccolamd -lcamd -lcolamd -lamd -llapack -lblas -lsuitesparseconfig -lrt -lcxsparse -llapack -lblas -lsuitesparseconfig -lrt -lcxsparse 
