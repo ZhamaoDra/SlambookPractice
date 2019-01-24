@@ -3,35 +3,37 @@
 #include<ceres/ceres.h>
 #include<fstream>
 
-#define A 1.0
-#define B 2.0
-#define C 1.0
-#define D 1.5
-#define N 100.0
-#define SIGMA 1.0
-
 using namespace std;
-
-struct  COST_FUNCTION{
-
-    COST_FUNCTION(double x,double y):_x(x),_y(x) {};
-    template<typename T>
-    bool operator() (const T* const abcd, T* residual)  const
+/*
+struct COST_FUNCTION
+{
+    COST_FUNCTION ( double x, double y ) : _x ( x ), _y ( y ) {}
+    // 残差的计算
+    template <typename T>
+    bool operator() (
+        const T* const abc,     // 模型参数，有3维
+        T* residual ) const     // 残差
     {
-            residual[0] = T(_y) - 
-                ceres::exp(
-                    abcd[0]*T(_x)*T(_x)*T(_x)   +
-                    abcd[1]*T(_x)*T(_x)     +
-                    abcd[2]*T(_x)      +
-                    abcd[3]   
-                );
-            return true;
+        residual[0] = T ( _y ) - ceres::exp ( abc[0]*T ( _x ) *T ( _x )*T ( _x ) + abc[1]*T ( _x )*T ( _x ) + abc[2]*T ( _x )+abc[3] ); // y-exp(ax^2+bx+c)
+        return true;
+    }
+    const double _x, _y;    // x,y数据
+};
+*/
+struct COST_FUNCTION
+{
+    COST_FUNCTION ( double x, double y ) : _x ( x ), _y ( y ) {}
+    template<typename T>
+    bool operator() (const T* const abcd, T* residual )
+    const{
+        residual[0] = T(_y) - ceres::exp( abcd[0]*T(_x)*T(_x)*T(_x)+abcd[1]*T(_x)*T(_x)+abcd[2]*T(_x)+abcd[3]);
+        return true;
     }
     const double _x,_y;
 };
 
-
 int main(int argc,char** argv){
+    double A = 1.0, B =2.0 ,C =1.0 ,D =1.5 ,N =100.0 ,SIGMA = 1.0;
     ofstream fout("random-result.txt");
     if(!fout.is_open()){
         cerr<<"can not open file\n";
@@ -67,7 +69,7 @@ int main(int argc,char** argv){
     options.minimizer_progress_to_stdout = true;
 
     ceres::Solver::Summary summary;
-    ceres::Solve(options , &problem ,&summary);
+    ceres::Solve(options, &problem ,&summary);
 
     cout<<summary.BriefReport()<<endl;
     cout<<"estimated a,b,c,d = ";

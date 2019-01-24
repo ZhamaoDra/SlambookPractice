@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/zhamao/SlambookPractice/ch6
 CMAKE_BINARY_DIR = /home/zhamao/SlambookPractice/ch6
 
 #=============================================================================
-# Target rules for target CMakeFiles/ceres_fitting.dir
+# Target rules for target CMakeFiles/curve_fitting.dir
 
 # All Build rule for target.
-CMakeFiles/ceres_fitting.dir/all:
-	$(MAKE) -f CMakeFiles/ceres_fitting.dir/build.make CMakeFiles/ceres_fitting.dir/depend
-	$(MAKE) -f CMakeFiles/ceres_fitting.dir/build.make CMakeFiles/ceres_fitting.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhamao/SlambookPractice/ch6/CMakeFiles --progress-num=1,2 "Built target ceres_fitting"
-.PHONY : CMakeFiles/ceres_fitting.dir/all
+CMakeFiles/curve_fitting.dir/all:
+	$(MAKE) -f CMakeFiles/curve_fitting.dir/build.make CMakeFiles/curve_fitting.dir/depend
+	$(MAKE) -f CMakeFiles/curve_fitting.dir/build.make CMakeFiles/curve_fitting.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhamao/SlambookPractice/ch6/CMakeFiles --progress-num=1,2 "Built target curve_fitting"
+.PHONY : CMakeFiles/curve_fitting.dir/all
 
 # Include target in all.
-all: CMakeFiles/ceres_fitting.dir/all
+all: CMakeFiles/curve_fitting.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ceres_fitting.dir/rule: cmake_check_build_system
+CMakeFiles/curve_fitting.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhamao/SlambookPractice/ch6/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ceres_fitting.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/curve_fitting.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhamao/SlambookPractice/ch6/CMakeFiles 0
-.PHONY : CMakeFiles/ceres_fitting.dir/rule
+.PHONY : CMakeFiles/curve_fitting.dir/rule
 
 # Convenience name for target.
-ceres_fitting: CMakeFiles/ceres_fitting.dir/rule
+curve_fitting: CMakeFiles/curve_fitting.dir/rule
 
-.PHONY : ceres_fitting
-
-# clean rule for target.
-CMakeFiles/ceres_fitting.dir/clean:
-	$(MAKE) -f CMakeFiles/ceres_fitting.dir/build.make CMakeFiles/ceres_fitting.dir/clean
-.PHONY : CMakeFiles/ceres_fitting.dir/clean
+.PHONY : curve_fitting
 
 # clean rule for target.
-clean: CMakeFiles/ceres_fitting.dir/clean
+CMakeFiles/curve_fitting.dir/clean:
+	$(MAKE) -f CMakeFiles/curve_fitting.dir/build.make CMakeFiles/curve_fitting.dir/clean
+.PHONY : CMakeFiles/curve_fitting.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/curve_fitting.dir/clean
 
 .PHONY : clean
 

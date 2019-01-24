@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ceres_fitting
+# Target rules for targets named curve_fitting
 
 # Build rule for target.
-ceres_fitting: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ceres_fitting
-.PHONY : ceres_fitting
+curve_fitting: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 curve_fitting
+.PHONY : curve_fitting
 
 # fast build rule for target.
-ceres_fitting/fast:
-	$(MAKE) -f CMakeFiles/ceres_fitting.dir/build.make CMakeFiles/ceres_fitting.dir/build
-.PHONY : ceres_fitting/fast
+curve_fitting/fast:
+	$(MAKE) -f CMakeFiles/curve_fitting.dir/build.make CMakeFiles/curve_fitting.dir/build
+.PHONY : curve_fitting/fast
 
 ceres-main.o: ceres-main.cc.o
 
@@ -129,7 +129,7 @@ ceres-main.o: ceres-main.cc.o
 
 # target to build an object file
 ceres-main.cc.o:
-	$(MAKE) -f CMakeFiles/ceres_fitting.dir/build.make CMakeFiles/ceres_fitting.dir/ceres-main.cc.o
+	$(MAKE) -f CMakeFiles/curve_fitting.dir/build.make CMakeFiles/curve_fitting.dir/ceres-main.cc.o
 .PHONY : ceres-main.cc.o
 
 ceres-main.i: ceres-main.cc.i
@@ -138,7 +138,7 @@ ceres-main.i: ceres-main.cc.i
 
 # target to preprocess a source file
 ceres-main.cc.i:
-	$(MAKE) -f CMakeFiles/ceres_fitting.dir/build.make CMakeFiles/ceres_fitting.dir/ceres-main.cc.i
+	$(MAKE) -f CMakeFiles/curve_fitting.dir/build.make CMakeFiles/curve_fitting.dir/ceres-main.cc.i
 .PHONY : ceres-main.cc.i
 
 ceres-main.s: ceres-main.cc.s
@@ -147,7 +147,7 @@ ceres-main.s: ceres-main.cc.s
 
 # target to generate assembly for a file
 ceres-main.cc.s:
-	$(MAKE) -f CMakeFiles/ceres_fitting.dir/build.make CMakeFiles/ceres_fitting.dir/ceres-main.cc.s
+	$(MAKE) -f CMakeFiles/curve_fitting.dir/build.make CMakeFiles/curve_fitting.dir/ceres-main.cc.s
 .PHONY : ceres-main.cc.s
 
 # Help Target
@@ -158,7 +158,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ceres_fitting"
+	@echo "... curve_fitting"
 	@echo "... ceres-main.o"
 	@echo "... ceres-main.i"
 	@echo "... ceres-main.s"
