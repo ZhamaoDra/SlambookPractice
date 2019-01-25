@@ -1,0 +1,8 @@
+on expert mode:
+
+K_Matrix:
+4132	0	2666
+0	4125	1457
+0	0	1	
+RadialDistortion: [0.1228 -0.3247]
+ImageSize: [2988 5312]
